@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FBF6B201ED7A651BD10ACF5 /* Pods_Neobis_iOS_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE60E8C5D448E86894E8467 /* Pods_Neobis_iOS_LoginApp.framework */; };
 		DCC51A0D29DA94FE00223FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC51A0C29DA94FE00223FBE /* AppDelegate.swift */; };
 		DCC51A0F29DA94FE00223FBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC51A0E29DA94FE00223FBE /* SceneDelegate.swift */; };
 		DCC51A1129DA94FE00223FBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC51A1029DA94FE00223FBE /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE60E8C5D448E86894E8467 /* Pods_Neobis_iOS_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46125586BE0589A740BD8478 /* Pods-Neobis_iOS_LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_LoginApp.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp.release.xcconfig"; sourceTree = "<group>"; };
+		77A4EAA03FB8B825ED201964 /* Pods-Neobis_iOS_LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DCC51A0929DA94FE00223FBE /* Neobis_iOS_LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC51A0C29DA94FE00223FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC51A0E29DA94FE00223FBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBF6B201ED7A651BD10ACF5 /* Pods_Neobis_iOS_LoginApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36640C419D39AF2A5340F72B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77A4EAA03FB8B825ED201964 /* Pods-Neobis_iOS_LoginApp.debug.xcconfig */,
+				46125586BE0589A740BD8478 /* Pods-Neobis_iOS_LoginApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9B84166033960A496E76980F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DE60E8C5D448E86894E8467 /* Pods_Neobis_iOS_LoginApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCC51A0029DA94FE00223FBE = {
 			isa = PBXGroup;
 			children = (
 				DCC51A0B29DA94FE00223FBE /* Neobis_iOS_LoginApp */,
 				DCC51A0A29DA94FE00223FBE /* Products */,
+				36640C419D39AF2A5340F72B /* Pods */,
+				9B84166033960A496E76980F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCC51A1D29DA950000223FBE /* Build configuration list for PBXNativeTarget "Neobis_iOS_LoginApp" */;
 			buildPhases = (
+				A778201DF27973A5341828D3 /* [CP] Check Pods Manifest.lock */,
 				DCC51A0529DA94FE00223FBE /* Sources */,
 				DCC51A0629DA94FE00223FBE /* Frameworks */,
 				DCC51A0729DA94FE00223FBE /* Resources */,
+				6F4582737D329280BBC99DB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F4582737D329280BBC99DB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A778201DF27973A5341828D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neobis_iOS_LoginApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCC51A0529DA94FE00223FBE /* Sources */ = {
@@ -282,6 +350,7 @@
 		};
 		DCC51A1E29DA950000223FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77A4EAA03FB8B825ED201964 /* Pods-Neobis_iOS_LoginApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,12 +372,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DCC51A1F29DA950000223FBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46125586BE0589A740BD8478 /* Pods-Neobis_iOS_LoginApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,7 +400,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
