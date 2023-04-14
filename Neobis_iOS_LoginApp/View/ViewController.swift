@@ -63,72 +63,63 @@ class MainViewController: UIViewController {
         return label
     }()
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
     
         view.backgroundColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
-        
         setupConstraints()
-        
+        buttonPressed()
+    }
+    
+    fileprivate func buttonPressed() {
         signInButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
-        
     }
     
     @objc func handleSignIn() {
-        print("Usernam: \(userNameTextField.text ?? ""), Password: \(passwordTextField.text ?? "")")
+        print("Username: \(userNameTextField.text ?? ""), Password: \(passwordTextField.text ?? "")")
     }
     
     fileprivate func setupConstraints() {
         
-         var customOffset = 200
-         var customHeight = 64
-        
-        if self.view.frame.height < 700 {
-            customOffset = 50
-            customHeight = 48
-        }
-        
         self.view.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(customOffset)
-            make.width.equalTo(150)
-            make.height.equalTo(150)
+            make.top.equalToSuperview().offset(flexibleHeight(to: 200))
+            make.width.equalTo(flexibleWidth(to: 150))
+            make.height.equalTo(flexibleWidth(to: 150))
         }
         self.view.addSubview(userNameTextField)
         userNameTextField.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(imageView.snp.bottom).offset(customHeight)
-            make.width.equalTo(280)
-            make.height.equalTo(customHeight)
+            make.top.equalTo(imageView.snp.bottom).offset(flexibleHeight(to: 64))
+            make.width.equalTo(flexibleWidth(to: 280))
+            make.height.equalTo(flexibleHeight(to: 64))
         }
         
         self.view.addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(userNameTextField.snp.bottom).offset(20)
-            make.width.equalTo(280)
-            make.height.equalTo(customHeight)
+            make.top.equalTo(userNameTextField.snp.bottom).offset(flexibleHeight(to: 20))
+            make.width.equalTo(flexibleWidth(to: 280))
+            make.height.equalTo(flexibleHeight(to: 64))
         }
         self.view.addSubview(loremIpsum)
         loremIpsum.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(flexibleHeight(to: 20))
         }
         self.view.addSubview(signInButton)
         signInButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(loremIpsum.snp.bottom).offset(customHeight)
-            make.width.equalTo(280)
-            make.height.equalTo(customHeight)
+            make.top.equalTo(loremIpsum.snp.bottom).offset(flexibleHeight(to: 64))
+            make.width.equalTo(flexibleWidth(to: 280))
+            make.height.equalTo(flexibleHeight(to: 64))
             
         }
         self.view.addSubview(loremIpsum2)
         loremIpsum2.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(signInButton.snp.bottom).offset(20)
+            make.top.equalTo(signInButton.snp.bottom).offset(flexibleHeight(to: 20))
         }
         
     }

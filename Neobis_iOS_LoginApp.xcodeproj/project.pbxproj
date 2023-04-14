@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FBF6B201ED7A651BD10ACF5 /* Pods_Neobis_iOS_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE60E8C5D448E86894E8467 /* Pods_Neobis_iOS_LoginApp.framework */; };
+		DCBA41BD29E922660051F2A8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA41BC29E922660051F2A8 /* Helper.swift */; };
 		DCC51A0D29DA94FE00223FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC51A0C29DA94FE00223FBE /* AppDelegate.swift */; };
 		DCC51A0F29DA94FE00223FBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC51A0E29DA94FE00223FBE /* SceneDelegate.swift */; };
 		DCC51A1129DA94FE00223FBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC51A1029DA94FE00223FBE /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		0DE60E8C5D448E86894E8467 /* Pods_Neobis_iOS_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46125586BE0589A740BD8478 /* Pods-Neobis_iOS_LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_LoginApp.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp.release.xcconfig"; sourceTree = "<group>"; };
 		77A4EAA03FB8B825ED201964 /* Pods-Neobis_iOS_LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_LoginApp/Pods-Neobis_iOS_LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DCBA41BC29E922660051F2A8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		DCC51A0929DA94FE00223FBE /* Neobis_iOS_LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC51A0C29DA94FE00223FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC51A0E29DA94FE00223FBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DCBA41BA29E922150051F2A8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DCC51A0C29DA94FE00223FBE /* AppDelegate.swift */,
+				DCC51A0E29DA94FE00223FBE /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		DCBA41BB29E922290051F2A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCC51A1029DA94FE00223FBE /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCBA41BE29E9226B0051F2A8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DCBA41BC29E922660051F2A8 /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DCC51A0029DA94FE00223FBE = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +107,9 @@
 		DCC51A0B29DA94FE00223FBE /* Neobis_iOS_LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				DCC51A0C29DA94FE00223FBE /* AppDelegate.swift */,
-				DCC51A0E29DA94FE00223FBE /* SceneDelegate.swift */,
-				DCC51A1029DA94FE00223FBE /* ViewController.swift */,
+				DCBA41BB29E922290051F2A8 /* View */,
+				DCBA41BE29E9226B0051F2A8 /* Helpers */,
+				DCBA41BA29E922150051F2A8 /* Delegate */,
 				DCC51A1229DA94FE00223FBE /* Main.storyboard */,
 				DCC51A1529DA950000223FBE /* Assets.xcassets */,
 				DCC51A1729DA950000223FBE /* LaunchScreen.storyboard */,
@@ -209,6 +236,7 @@
 				DCC51A1129DA94FE00223FBE /* ViewController.swift in Sources */,
 				DCC51A0D29DA94FE00223FBE /* AppDelegate.swift in Sources */,
 				DCC51A0F29DA94FE00223FBE /* SceneDelegate.swift in Sources */,
+				DCBA41BD29E922660051F2A8 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
